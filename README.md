@@ -77,7 +77,7 @@ docker compose down -v
 
 ## 4. Servicios importantes levantados
 
-| Servicio | URL | Validación |
+| Servicio | URL | Contenido a ver |
 |----------|-----|-----------|
 | Frontend | http://localhost:8080 | Página "Hello World" con dos botones  |
 | Backend  | http://localhost:3001/metrics | Texto de métricas en formato Prometheus |
