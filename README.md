@@ -145,8 +145,59 @@ El panel del CPU host muestra el uso de la máquina, sumando los procesos del SO
 El evaluation interval es cada cuánto Grafana evalúa la condición de la alarma, por ejemplo cada 10 segundos. El pending period es cuánto tiempo debe mantenerse la condición de forma continua antes de que la alarma pase a estado Firing, por ejemplo 30 segundos. Evaluation interval controla la frecuencia de la revisión, y el pending period evita falsos positivos: un pico de CPU de 2 segundos no dispara la alarma si el pending period es 30 segundos.
 
 ---
+## 9. Instrucciones que validan el trabajo
 
-## 9. Evidencias del desarrollo
+Se hace mención seguir los siguientes pasos:
+
+### 9.1 Clonar o descargar el repositorio
+
+Ubicarse en la carpeta ..\Bryan-Ruiz-Tulumba-iac-observabilidad con su IDE (de preferencia). Asegurarse de tener instalado Docker, luego, ejecutar los siguientes comandos:
+
+Para levantar el stack
+
+```bash
+docker compose up -d --build
+```
+
+Comando que verifica el estado de los contenedores
+
+```bash
+docker compose ps
+```
+
+Los servicios principales, es recomendable abrirlos
+
+- **Frontend:** http://localhost:8080
+- **Backend:** http://localhost:3001/metrics
+- **Grafana:** http://localhost:3000
+
+### 9.2 Ingresar a la URL de Grafana
+
+Al ingresar, usar las credenciales otorgadas al inicio: admin y admin (en user y contraseña)
+
+### 9.3 Abrir el dashboard
+
+Una vez dentro de Grafana, ir a **Dashboards → Observabilidad - Bryan Gabriel Ruiz Tulumba**
+
+Se observarán los paneles:
+- CPU backend (%)
+- CPU host (%)
+- Logs de aplicación
+- Logs de infraestructura
+
+### 9.4 Confirmar el funcionamiento de la alerta
+
+En el frontend, es necesario presionar el botón: Generar carga de CPU (30s)
+Luego, en Grafana, ir a **Alerting → Alert rules**, en donde se encontrará la alerta **CPU backend > 50%** que tiene que pasar a estado **Firing**. Al finalizar la carga debería pasar a estado **Normal**.
+
+### 9.5 Validar el ciclo alarma → log
+
+En el panel de **logs de aplicación**, debe aparecer el mensaje:
+grafana_alert_received con estado: firing
+
+---
+
+## 10. Evidencias del desarrollo
 
 Se pueden encontrar en: capturas_trabajo/
 
