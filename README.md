@@ -169,27 +169,11 @@ Se observarán los paneles:
 En el frontend, es necesario presionar el botón: Generar carga de CPU (30s)
 Luego, en Grafana, ir a **Alerting → Alert rules**, en donde se encontrará la alerta **CPU backend > 50%** que tiene que pasar a estado **Firing**. Al finalizar la carga debería pasar a estado **Normal**.
 
-### 9.5 Validar el ciclo alarma → log
+### 8.5 Validar el ciclo alarma → log
 
 En el panel de **logs de aplicación**, debe aparecer el mensaje:
 grafana_alert_received con estado: firing
 
 ---
 
-## 9. Evidencias del desarrollo
 
-Se pueden encontrar en: capturas_trabajo/
-
-Archivo : captura_evidencias_Bryan_Ruiz_Tulumba.pdf
-
-Contiene evidencias de:
-Stack levantado con los servicios
-Panel de CPU por contenedor y panel de CPU del host
-Panel de logs de aplicación funcionando
-Panel de logs de infraestructura funcionando
-Creación y configuración de la alarma CPU > 50%
-Alarma en estado Firing
-Ciclo cerrado alarma → log vía webhook
-Redacción de breve explicación de qué hace cada componente del stack.
-
----
