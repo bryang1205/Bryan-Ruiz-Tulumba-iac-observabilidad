@@ -161,4 +161,5 @@ Creación y configuración de la alarma CPU > 50%
 Alarma en estado Firing
 Ciclo cerrado alarma → log vía webhook
 Redacción de breve explicación de qué hace cada componente del stack.
+
 ---
