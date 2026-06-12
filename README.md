@@ -1,6 +1,6 @@
 # Laboratorio de Observabilidad
 
-**Curso: Infraestructura como Código** 
+**Curso:** Infraestructura Como Código
 **Estudiante:** Bryan Gabriel Ruiz Tulumba
 
 ---
@@ -146,7 +146,7 @@ El evaluation interval es cada cuánto Grafana evalúa la condición de la alarm
 
 ---
 
-## 11. Evidencias del desarrollo
+## 9. Evidencias del desarrollo
 
 Se pueden encontrar en: capturas_trabajo/
 
