@@ -1,7 +1,7 @@
 # Laboratorio de Observabilidad
 
-**Curso:** Infraestructura Como Código
-**Estudiante:** Bryan Gabriel Ruiz Tulumba
+- **Curso:** Infraestructura Como Código
+- **Estudiante:** Bryan Gabriel Ruiz Tulumba
 
 ---
 
@@ -124,11 +124,11 @@ Contact Point: webhook a `http://backend:3001/alerts`
 El contact point apunta a: http://backend:3001/alerts, Grafana envió la alerta al backend cuando la alarma se disparay este ultimo registra el evento en un log indicando un "grafana_alert_received" (DEMOSTRACIÓN ADJUNTADA EN EVIDENCIAS)
 
 ---
-## 9. Instrucciones que validan el trabajo
+## 8. Instrucciones que validan el trabajo
 
 Se hace mención seguir los siguientes pasos:
 
-### 9.1 Clonar o descargar el repositorio
+### 8.1 Clonar o descargar el repositorio
 
 Ubicarse en la carpeta ..\Bryan-Ruiz-Tulumba-iac-observabilidad con su IDE (de preferencia). Asegurarse de tener instalado Docker, luego, ejecutar los siguientes comandos:
 
@@ -150,11 +150,11 @@ Los servicios principales, es recomendable abrirlos
 - **Backend:** http://localhost:3001/metrics
 - **Grafana:** http://localhost:3000
 
-### 9.2 Ingresar a la URL de Grafana
+### 8.2 Ingresar a la URL de Grafana
 
 Al ingresar, usar las credenciales otorgadas al inicio: admin y admin (en user y contraseña)
 
-### 9.3 Abrir el dashboard
+### 8.3 Abrir el dashboard
 
 Una vez dentro de Grafana, ir a **Dashboards → Observabilidad - Bryan Gabriel Ruiz Tulumba**
 
@@ -164,7 +164,7 @@ Se observarán los paneles:
 - Logs de aplicación
 - Logs de infraestructura
 
-### 9.4 Confirmar el funcionamiento de la alerta
+### 8.4 Confirmar el funcionamiento de la alerta
 
 En el frontend, es necesario presionar el botón: Generar carga de CPU (30s)
 Luego, en Grafana, ir a **Alerting → Alert rules**, en donde se encontrará la alerta **CPU backend > 50%** que tiene que pasar a estado **Firing**. Al finalizar la carga debería pasar a estado **Normal**.
@@ -176,7 +176,7 @@ grafana_alert_received con estado: firing
 
 ---
 
-## 10. Evidencias del desarrollo
+## 9. Evidencias del desarrollo
 
 Se pueden encontrar en: capturas_trabajo/
 
